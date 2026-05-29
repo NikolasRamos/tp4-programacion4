@@ -1,14 +1,18 @@
 import { PersonaModel } from './persona.model'
 
 export class AlumnoModel extends PersonaModel {
+  private legajo: number
+  private fechaAlta: string
+  private modificacion: string
+  private isActive: boolean
   constructor(
     nombre: string,
     apellido: string,
     email: string,
-    private legajo: number,
-    private fechaAlta: string = new Date().toISOString().split('T')[0],
-    private modificacion: string = new Date().toISOString().split('T')[0],
-    private isActive: boolean = true
+    legajo: number,
+    fechaAlta: string = new Date().toISOString().split('T')[0],
+    modificacion: string = new Date().toISOString().split('T')[0],
+    isActive: boolean = true
   ) {
     super(nombre, apellido, email)
     this.legajo = legajo
