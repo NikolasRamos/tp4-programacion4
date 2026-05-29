@@ -5,10 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
+    "start": "ts-node app.js",
     "lint": "npx standard",
     "fix": "npx standard --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "dev": "nodemon --exec ts-node app.js"
   },
   "author": "",
   "license": "MIT",
